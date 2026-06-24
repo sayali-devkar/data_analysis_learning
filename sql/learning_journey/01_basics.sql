@@ -48,3 +48,58 @@ SELECT*FROM employees;
 SELECT name, salary FROM employees WHERE salary >= 60000;
 SELECT name, salary FROM employees WHERE salary > 60000;
 SELECT * FROM employees WHERE city = 'Pune' OR city = 'Mumbai';
+
+
+-- DAY 2 OF SQL BASICS 
+
+-- Get all employees from Mumbai
+SELECT*FROM employees WHERE city = 'Mumbai';
+
+-- Get only name and salary of employees earning more than 60000
+SELECT name , salary FROM employees WHERE salary > 60000;
+
+-- Get employees sorted by salary highest to lowest
+SELECT*FROM employees ORDER BY salary DESC;
+
+-- Get top 3 highest paid employees
+SELECT*FROM employees  LIMIT 3;
+
+-- Get employees whose name contains 'a'
+SELECT*FROM employees WHERE name LIKE '%a%' ;
+
+-- AND With WHERE CLAUSE
+-- Employees from Mumbai with salary above 60000
+SELECT*FROM employees WHERE city = 'Mumbai' AND salary > 60000;
+
+-- OR With WHERE CLAUSE
+-- Employees from Pune OR Delhi
+SELECT*FROM employees WHERE city = 'Pune' OR city = 'Delhi';
+
+-- IN With WHERE CLAUSE
+-- Employees whose role is IN ('Analyst', 'Tester', 'Engineer')
+SELECT*FROM employees WHERE role IN ('Analyst' , 'Tester' , 'Engineer');
+
+-- DELETE
+-- ALWAYS USE WHERE CLAUSE WITH DELETE 
+-- BEFORE DELETING TRY SELECT AND SEE WHEATHER ITS THE CORRECT RECORD YOU WANT TO DELETE
+SELECT*FROM employees WHERE name = 'Karan';
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM employees WHERE name ='Karan';
+SELECT*FROM employees;
+SET SQL_SAFE_UPDATES = 1;
+
+-- safest way to delete is using id
+DELETE FROM employees WHERE id = 3;
+SELECT*FROM employees; 
+
+-- 1.Update Rahul's salary to 85000
+UPDATE employees
+SET salary = 85000
+WHERE id = 1;
+SELECT*FROM employees;
+
+-- 2. Update Sheela's city to Pune and salary to 95000
+UPDATE employees
+SET city = 'Pune' , salary = 95000
+WHERE id = 2;
+SELECT*FROM employees;
