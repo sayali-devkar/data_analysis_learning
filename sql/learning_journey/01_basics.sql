@@ -103,3 +103,20 @@ UPDATE employees
 SET city = 'Pune' , salary = 95000
 WHERE id = 2;
 SELECT*FROM employees;
+
+-- DAY 3
+-- ALTER TABLE USED TO MODIFY THE TABLE STRUCTURE
+
+-- 1. Add a email column
+ALTER TABLE employees ADD email VARCHAR(50);
+SELECT*FROM employees;
+
+-- 2. Drop the email column
+ALTER TABLE employees DROP COLUMN email;
+SELECT*FROM employees;
+
+-- 3. MODIFY : USED TO CHANGE THE DATATYPE OF COLUMN OR CONTRAINT OF A COLUMN
+
+-- 4. RENAME : USED TO RENAME A COLUMN WITH A DIFFERENT NAME 
+ALTER TABLE employees RENAME COLUMN role TO job_title;
+SELECT*FROM employees;
