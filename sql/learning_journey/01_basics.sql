@@ -120,3 +120,35 @@ SELECT*FROM employees;
 -- 4. RENAME : USED TO RENAME A COLUMN WITH A DIFFERENT NAME 
 ALTER TABLE employees RENAME COLUMN role TO job_title;
 SELECT*FROM employees;
+
+-- DAY 4 
+-- TRUNCATE 
+
+-- 1. Write a query to remove all data from a table called employee 
+-- without deleting the table itself.
+-- TRUNCATE TABLE employees;
+
+-- 2. What is the difference between DELETE FROM employee and TRUNCATE TABLE employee?
+-- DELETE removes only specific commandas if selected 
+-- TRUNCATE cannot remove selected commandas it removes the whole rows at one go.
+
+-- DROP 
+-- DROP it deletes the data+structure once lost it cannot be taken back
+
+-- LIMIT (and OFFSET)
+-- fetching first 3 records from employees table
+SELECT*FROM employees LIMIT 3;
+
+-- fecting top 3 salaries 
+SELECT*FROM employees ORDER BY salary DESC LIMIT 3;
+
+-- fectching record of last 2 employee
+SELECT*FROM employees LIMIT 2 OFFSET 2;
+
+-- ORDER BY : SORT YUR QUERIES IN ASC OR DESC ORDER
+
+-- 1 SALARIES IN ASC ORDER (DEFUALT ASC)
+SELECT*FROM employees ORDER BY salary;
+
+-- 2. SALARIES IN DESC ORDER
+SELECT*FROM employees ORDER BY salary DESC;
