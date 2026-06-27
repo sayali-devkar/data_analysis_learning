@@ -152,3 +152,39 @@ SELECT*FROM employees ORDER BY salary;
 
 -- 2. SALARIES IN DESC ORDER
 SELECT*FROM employees ORDER BY salary DESC;
+
+-- DAY 5 
+
+-- DISTINCT 
+SELECT*FROM employees;
+SELECT DISTINCT job_title FROM employees;
+
+-- AGGREGATE FUNCTIONS 
+-- 1. COUNT 
+SELECT COUNT(*) FROM employees;
+SELECT COUNT(salary) FROM employees;
+
+-- 2. SUM 
+-- TOTAL SALARY PAID TO EMPLOYEES IN ONE MONTH
+SELECT SUM(salary) FROM employees;
+
+-- 3. AVG
+SELECT AVG(salary) FROM employees;
+
+-- 4. MAX
+SELECT MAX(salary) FROM employees;
+
+-- 5.MIN
+SELECT MIN(salary) FROM employees;
+
+
+SELECT*FROM employees
+
+INSERT INTO employees (name , job_title , city , salary , experience)
+VALUES
+(,'Rohit', 'Engineer', 'Pune', 78000, 3),
+(,'Sneha', 'Manager', 'Mumbai', 92000, 6),
+(,'Karan', 'Tester', 'Mumbai', 55000, 2),
+(,'Pooja', 'Engineer', 'Banglore', 72000, 4);
+DELETE FROM employees WHERE id >= 11;
+SELECT*FROM employees;
