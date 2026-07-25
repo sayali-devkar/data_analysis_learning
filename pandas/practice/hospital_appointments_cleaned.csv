@@ -1,0 +1,11 @@
+Patient_ID,Patient_Name,Gender,DOB,Appointment_Date,Department,Doctor,Fee
+101,Rahul Sharma,Male,2000-03-15,2025-07-20,Cardiology,Dr. Mehta,500
+102,Priya Patil,Female,2001-08-12,2025-07-21,Neurology,Dr. Shah,700
+103,Amit Kumar,Male,1999-03-05,2025-07-22,Orthopedics,Dr. Rao,600
+104,Neha Joshi,Female,1998-05-04,2025-07-23,Pediatrics,Dr. Singh,450
+105,Rohan Gupta,Male,1997-11-18,2025-03-24,Dermatology,Dr. Patel,550
+106,Sneha Kulkarni,Female,,2025-07-25,Cardiology,Dr. Mehta,500
+107,Vikas More,Male,,2025-07-26,Neurology,Dr. Shah,700
+108,Pooja Desai,Female,,2025-07-27,Orthopedics,Dr. Rao,600
+109,Arjun Patil,Male,2002-12-09,2025-07-28,Pediatrics,Dr. Singh,450
+110,Kiran Naik,Female,2001-10-18,2025-07-29,Dermatology,Dr. Patel,550
