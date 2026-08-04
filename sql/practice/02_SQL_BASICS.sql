@@ -110,3 +110,32 @@ WHERE name LIKE '_____';
 SELECT*
 FROM employees
 WHERE city LIKE 'B%';
+
+-- Q10) Display all employees ordered by salary in ascending order.
+SELECT*
+FROM employees
+ORDER BY salary;
+
+-- Q11) Display all employees ordered by salary in descending order.
+SELECT*
+FROM employees
+ORDER BY salary DESC;
+
+-- 12) Display all employees ordered by name alphabetically.
+SELECT*
+FROM employees
+ORDER BY name;
+
+-- 13) Display the name, department, and salary of employees from the IT department, ordered by salary from highest to lowest.
+SELECT
+    name,
+    department,
+    salary
+FROM employees
+WHERE department = 'IT'
+ORDER BY salary DESC;
+
+-- 14) Display all employees ordered by: Department (A → Z) , Salary (Highest → Lowest within each department)
+SELECT*
+FROM employees
+ORDER BY department ASC , salary DESC;
