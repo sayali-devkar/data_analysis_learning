@@ -139,3 +139,15 @@ ORDER BY salary DESC;
 SELECT*
 FROM employees
 ORDER BY department ASC , salary DESC;
+
+-- Q15) Display the name, city, and salary of employees who are from Mumbai, ordered by salary from lowest to highest.
+SELECT 
+name , city , salary 
+FROM employees
+WHERE city = 'Mumbai'
+ORDER BY salary ASC;
+
+-- Q16) Display all employees ordered by: City (A → Z) , Age (Youngest → Oldest) ,Salary (Highest → Lowest).
+SELECT*
+FROM employees
+ORDER BY city ASC , age ASC , salary DESC;
