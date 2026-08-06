@@ -151,3 +151,36 @@ ORDER BY salary ASC;
 SELECT*
 FROM employees
 ORDER BY city ASC , age ASC , salary DESC;
+
+-- Q17) Display the first 5 employees
+SELECT*
+FROM employees
+LIMIT 5;
+
+-- Q18) Display the name and salary of the first 8 employees.
+SELECT
+name , salary 
+FROM  employees
+LIMIT 8;
+
+-- Q19) Display the top 3 highest-paid employees.
+SELECT*
+FROM employees
+ORDER BY
+salary DESC
+LIMIT 3;
+
+-- Q20) Display the youngest 4 employees.
+SELECT*
+FROM employees
+ORDER BY 
+age ASC
+LIMIT 4;
+
+-- Q21 Display the first 2 employees from the IT department, ordered by salary from highest to lowest.
+SELECT*
+FROM employees
+WHERE department = 'IT'
+ORDER BY 
+salary DESC
+LIMIT 2;
