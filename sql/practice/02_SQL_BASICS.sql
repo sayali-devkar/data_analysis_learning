@@ -184,3 +184,48 @@ WHERE department = 'IT'
 ORDER BY 
 salary DESC
 LIMIT 2;
+
+-- Q22 Display all unique departments.
+SELECT DISTINCT
+department
+FROM employees;
+
+-- Q23 Display all unique cities.
+SELECT DISTINCT
+city FROM employees;
+
+-- Q24 Display all unique department-city combinations.
+SELECT DISTINCT
+department , city 
+FROM employees;
+
+-- Q25 Display all unique salaries.
+SELECT DISTINCT
+salary FROM 
+employees;
+
+-- Q26 How many different departments are there in the company?
+SELECT COUNT(DISTINCT department)
+FROM employees;
+
+-- Q27 Count the total number of employees.
+SELECT COUNT(*)
+FROM employees;
+
+-- Q28 Count how many employees belong to the IT department.
+SELECT COUNT (department) 
+FROM employees
+WHERE department = 'IT';
+
+-- Q29 Count how many employees are from Pune.
+SELECT COUNT(city)
+FROM employees
+WHERE city = 'Pune';
+
+-- Q30 Count the number of different cities.
+SELECT COUNT(DISTINCT city)
+FROM employees;
+
+-- Q31 Count the number of different salaries.
+SELECT COUNT(DISTINCT salary)
+FROM employees;
