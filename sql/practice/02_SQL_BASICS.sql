@@ -229,3 +229,46 @@ FROM employees;
 -- Q31 Count the number of different salaries.
 SELECT COUNT(DISTINCT salary)
 FROM employees;
+
+-- Q32 Display the total salary of all employees.
+SELECT SUM(salary)
+FROM employees;
+
+-- Q33 Display the total salary of employees from the IT department.
+SELECT SUM(salary)
+FROM employees
+WHERE department = 'IT';
+
+-- Q34 Display the total years of experience of all employees.
+SELECT SUM(experience)
+FROM employees;
+
+-- Q35 Display the total salary of employees from Pune.
+SELECT SUM(salary)
+FROM employees
+WHERE city = 'Pune';
+
+-- Q36 Display the average salary of all employees.
+SELECT AVG(salary)
+FROM employees;
+
+-- Q37 Display the average salary of employees in the IT department.
+SELECT AVG(salary)
+FROM employees
+WHERE department = 'IT';
+
+-- Q38 Display the average age of all employees.
+SELECT AVG(age)
+FROM employees;
+
+-- Q39 Display the average experience of employees from Pune.
+SELECT AVG(experience)
+FROM employees
+WHERE city = 'Pune';
+
+-- Q40 Display the average salary of employees from Mumbai.
+SELECT AVG(salary)
+FROM employees
+WHERE 
+city = 'Mumbai';
+
