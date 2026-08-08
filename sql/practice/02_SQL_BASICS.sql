@@ -272,3 +272,10 @@ FROM employees
 WHERE 
 city = 'Mumbai';
 
+--  Display the highest salary among all employees.
+SELECT MIN(salary)
+FROM employees;
+
+-- Q42 Display the lowest salary among employees in the IT department
+SELECT MAX(salary)
+FROM employees;
