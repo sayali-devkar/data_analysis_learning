@@ -279,3 +279,74 @@ FROM employees;
 -- Q42 Display the lowest salary among employees in the IT department
 SELECT MAX(salary)
 FROM employees;
+
+-- Q43) Display the number of employees in each department.
+
+SELECT department , COUNT(*)
+FROM employees
+GROUP BY (department);
+
+-- Q44) Display the number of employees in each city.
+
+SELECT city , COUNT(*)
+FROM employees
+GROUP BY (city);
+
+-- Q45) Display the average salary of each department.
+
+SELECT department , AVG(salary)
+FROM employees
+GROUP BY (department)
+
+-- Q46) Display the total salary paid for each department.
+
+SELECT department , SUM(salary)
+FROM employees
+GROUP BY (department);
+
+-- Q47) Display the highest salary in each department.
+
+SELECT department , MAX(salary)
+FROM employees
+GROUP BY (department);
+
+-- Q48) Display the number of employees in each department
+-- who have a salary greater than 50000.
+
+SELECT department , COUNT(*)
+FROM employees
+WHERE salary > 50000
+GROUP BY department;
+
+
+-- Q49) Display the average salary of employees in each city
+-- where experience is greater than 3 years.
+
+SELECT city , AVG(salary)
+FROM employees
+WHERE experience > 3
+GROUP BY city;
+
+-- Q50) Display the total salary of employees in each department
+-- who are older than 25.
+
+SELECT department , SUM(salary)
+FROM employees
+WHERE age > 25
+GROUP BY department;
+
+-- Q51) Display the highest salary in each city
+-- where the employee rating is greater than 4.
+
+SELECT city , MAX(salary)
+FROM employees
+WHERE rating > 4
+GROUP BY city;
+
+-- Q52) Display the number of employees in each department
+-- from Pune.
+
+SELECT department , COUNT(*)
+FROM employees
+WHERE city = 'Pune'
+GROUP BY department ;
