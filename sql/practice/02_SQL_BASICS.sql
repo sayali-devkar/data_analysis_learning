@@ -350,3 +350,47 @@ SELECT department , COUNT(*)
 FROM employees
 WHERE city = 'Pune'
 GROUP BY department ;
+
+-- Q53) Display the number of employees in each department.
+SELECT department , COUNT(*)
+FROM employees
+GROUP BY department;
+
+
+-- Q54) Display the average salary of employees in each city.
+SELECT city , AVG(salary)
+FROM employees
+GROUP BY (city);
+
+-- Q55) Display departments having more than 3 employees.
+SELECT department , COUNT(*)
+FROM employees
+GROUP BY department
+HAVING COUNT(*) >= 3;
+
+-- Q56) Display cities having more than 2 employees.
+SELECT city , COUNT(*)
+FROM employees
+GROUP BY city
+HAVING COUNT(*) > 2;
+
+-- Q57) Display departments where the average salary is greater than 50000.
+SELECT department , AVG(salary)
+FROM employees
+GROUP BY department
+HAVING AVG(salary) > 50000;
+
+SELECT DISTINCT department
+FROM employees;
+
+-- Q58) Display departments where the total salary is greater than 150000.
+SELECT department , SUM(salary)
+FROM employees
+GROUP BY department
+HAVING SUM(salary) > 150000;
+
+-- Q59) Display cities where the highest salary is greater than 70000.
+SELECT city , MAX(salary)
+FROM employees
+GROUP BY (city)
+HAVING MAX(salary) > 70000;
