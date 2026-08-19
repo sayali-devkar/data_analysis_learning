@@ -132,3 +132,27 @@ FROM employees e
 INNER JOIN departments d
 ON e.department_id = d.department_id
 WHERE (department_name = 'IT' OR department_name = 'Finance') AND salary > 65000;
+
+-- Q16) Display the employee name and department name
+-- for all employees.
+SELECT e.name , d.department_name 
+from employees e
+INNER JOIN departments d 
+ON e.department_id = d.department_id;
+
+
+-- Q17) Display the names and salaries of employees
+-- who work in the IT department.
+SELECT e.name , e.salary 
+FROM employees e 
+INNER JOIN departments d
+ON e.department_id = d.department_id
+WHERE department_name = 'IT';
+
+-- Q18) Display the department name and number of employees
+-- in each department.
+SELECT d.department_name, COUNT(*)
+FROM departments d
+INNER JOIN employees e
+ON e.department_id = d.department_id
+GROUP BY d.department_name;
